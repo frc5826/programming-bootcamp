@@ -4,7 +4,7 @@ package com.avisautomata.lectures;
 public class Variables {
 
     public static void main(String[] args){
-        multivariable();
+        simple();
     }
 
     public static void simple(){
@@ -18,7 +18,7 @@ public class Variables {
         int alpha = 1;
         System.out.println(alpha);
 
-        //Notice we don't have "int" include here. Why's that?
+        //Thought - we don't have "int" include here. Why's that?
         alpha = 2;
         System.out.println(alpha);
     }

@@ -3,7 +3,7 @@ package com.avisautomata.problems.tests;
 import com.avisautomata.problems.Operators;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class Test_Operators {
 
@@ -55,6 +55,24 @@ public class Test_Operators {
             int a = (int)(Math.random() * 100);
             assertEquals(a % 6, operators.howManyLeft(a), "Failed on " + a);
         }
+    }
+
+    @Test
+    public void testShouldExplore(){
+        assertTrue(operators.shouldExplore(true, .5), "50% battery and on explorer duty, got false");
+        assertFalse(operators.shouldExplore(true, .3), "30% battery and on explorer duty, got true");
+        assertFalse(operators.shouldExplore(false, .1), "10% battery and not on explorer duty, got true");
+        assertFalse(operators.shouldExplore(false, .80), "80% battery and not on explorer duty, got true");
+    }
+
+    @Test
+    public void testShouldReturnHome(){
+        assertTrue(operators.shouldReturnHome(11, .5), "50% battery and 11 cargo, got false");
+        assertFalse(operators.shouldReturnHome(5, .3), "30% battery and 5 cargo, got true");
+        assertFalse(operators.shouldReturnHome(1, .8), "80% battery and 1 cargo, got true");
+        assertTrue(operators.shouldReturnHome(10, .8), "80% battery and 10 cargo, got false");
+        assertTrue(operators.shouldReturnHome(10, .2), "20% battery and 10 cargo, got false");
+
     }
 
 }

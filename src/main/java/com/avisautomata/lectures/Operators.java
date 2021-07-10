@@ -48,8 +48,24 @@ public class Operators {
         System.out.println(value);
     }
 
+    //https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html
+    public static void equality(){
+        // == returns true if two values are equal, != return true if they are not equal
+        System.out.println(1 == 2);
+        System.out.println(1 != 2);
+    }
+
+    public static void equalityCompare(){
+        // > returns true if the value on the left is greater than the one on the right
+        // >= will also return true if the two values are equal
+        // < and <= are the same, just reversed. They will return true if the value on the left is less than.
+        System.out.println(5 > 4);
+        System.out.println(5 > 5);
+        System.out.println(5 >= 5);
+    }
+
     public static void unaryBool(){
-        //! (Logical complement) inverts boolean values
+        // ! (Logical complement) inverts boolean values
         boolean truth = false;
         System.out.println(truth);
         truth = !truth;
@@ -58,20 +74,20 @@ public class Operators {
         System.out.println(truth);
     }
 
-    //https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html
-    public static void equality(){
-        //== returns true if two values are equal, != return true if they are not equal
-        System.out.println(1 == 2);
-        System.out.println(1 != 2);
-    }
+    public static void andOr(){
+        // && (and) returns true if both booleans are true, false if not
+        // || (or) return true if one boolean is true, false if both are false
 
-    public static void equalityCompare(){
-        //> returns true if the value on the left is greater than the one on the right
-        //>= will also return true if the two values are equal
-        //< and <= are the same, just reversed. They will return true if the value on the left is less than.
-        System.out.println(5 > 4);
-        System.out.println(5 > 5);
-        System.out.println(5 >= 5);
+        boolean hasCargoCapacity = true;
+        boolean isOnCargoDuty = true;
+
+        boolean shouldGetCargo = hasCargoCapacity && isOnCargoDuty;
+        System.out.println(shouldGetCargo);
+
+        boolean isExploring = true;
+
+        boolean shouldMove = isExploring || isOnCargoDuty;
+        System.out.println(shouldMove);
     }
 
     //Thought - what happens when you use operators on different types?

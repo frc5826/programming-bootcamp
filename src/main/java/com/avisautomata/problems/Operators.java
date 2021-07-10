@@ -31,4 +31,14 @@ public class Operators {
         return 0;
     }
 
+    public boolean shouldExplore(boolean isOnExploreDuty, double batteryCapacity){
+        //Test! Your robot should explore is it's on duty and has a battery capacity over 30% (.30)
+        return false;
+    }
+
+    public boolean shouldReturnHome(int cargo, double batteryCapacity){
+        //Test! Your robot should return home if its cargo is full (max 10) or its batter is below 30% (.30)
+        return false;
+    }
+
 }
