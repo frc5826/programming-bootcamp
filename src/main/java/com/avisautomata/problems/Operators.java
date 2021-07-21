@@ -31,6 +31,8 @@ public class Operators {
         return 0;
     }
 
+    //Stop Here
+
     public boolean shouldExplore(boolean isOnExploreDuty, double batteryCapacity){
         //Test! Your robot should explore is it's on duty and has a battery capacity over 30% (.30)
         return false;

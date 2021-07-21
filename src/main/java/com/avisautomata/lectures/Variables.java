@@ -1,10 +1,12 @@
 package com.avisautomata.lectures;
 
+// - Lecture #2
+
 //https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html
 public class Variables {
 
     public static void main(String[] args){
-        simple();
+        reuse();
     }
 
     public static void simple(){

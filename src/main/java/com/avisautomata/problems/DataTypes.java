@@ -11,6 +11,7 @@ public class DataTypes {
      */
 
     //Put your variable here
+    public int crates = 0;
 
     /*
     Test!

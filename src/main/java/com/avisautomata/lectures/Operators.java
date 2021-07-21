@@ -1,10 +1,12 @@
 package com.avisautomata.lectures;
 
+//Lecture #4
+
 //https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html
 public class Operators {
 
     public static void main(String[] args){
-        equality();
+        division();
     }
 
     //https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html
@@ -23,7 +25,7 @@ public class Operators {
     public static void division(){
         //Arithmetic operators (/, %)
         //Integer division is weird...
-        System.out.println(1 / 2);
+        //System.out.println(1 / 2);
         System.out.println(1 % 2);
     }
 
